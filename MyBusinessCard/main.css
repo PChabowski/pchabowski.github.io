@@ -1,52 +1,14 @@
 body, html
 {
 	background-color: #223247;
-	height: 100%;
 	margin: 0;
 	font: 400 15px/1.8 "Lato", sans-serif;
 	color: #777;
 }
 
-#header
-{
-	height: 100%;
+header, footer{
+	min-height: 62px;
 }
-.bgheader
-{
-	position: relative;
-	opacity: 0.65;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-image: url("tlo.png")!important;
-	height: 100%;
-}
-
-.caption
-{
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 100%;
-	text-align: center;
-	color: #000;
-}
-
-.caption a
-{
-	text-decoration: none;
-}
-
-.caption a.logo
-{
-	background-color: #223247;
-	color: #fff;
-	padding: 18px;
-	font-size: 25px;
-	letter-spacing: 10px;
-	text-transform: uppercase;
-}
-
 
 h3 {
   letter-spacing: 5px;
@@ -93,17 +55,6 @@ h3 {
 .bg-dark
 {
 	background-color: #111!important;
-	min-height: 55px;
-}
-
-.orange
-{
-	color: #ff6e00;
-}
-
-.green
-{
-	color: #6eff00;
 }
 
 #content img
