@@ -1,0 +1,116 @@
+body, html
+{
+	background-color: #223247;
+	height: 100%;
+	margin: 0;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	color: #777;
+}
+
+#header
+{
+	height: 100%;
+}
+.bgheader
+{
+	position: relative;
+	opacity: 0.65;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url("tlo.png")!important;
+	height: 100%;
+}
+
+.caption
+{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: #000;
+}
+
+.caption a
+{
+	text-decoration: none;
+}
+
+.caption a.logo
+{
+	background-color: #223247;
+	color: #fff;
+	padding: 18px;
+	font-size: 25px;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+}
+
+
+h3 {
+  letter-spacing: 5px;
+  text-decoration: underline;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+  padding-bottom: 10px;
+}
+
+#content
+{
+	background-color: lightgrey;
+	border-radius: 3px;
+	margin: 90px auto 30px!important;
+    -webkit-box-shadow: 0px 0px 50px -8px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 50px -8px rgba(0, 0, 0, 1);
+	box-shadow: 0px 0px 50px -8px rgba(0, 0, 0, 1);
+}
+
+#content p
+{
+	color: #3f433f;
+}
+
+.button
+{
+	letter-spacing: 2px;
+	font-size: 18px;
+	padding: 7px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.button:hover,
+.active
+{
+	background-color: lightgrey;
+	text-decoration: 2px underline;
+	border-radius: 5px;
+	color: #111!important;
+
+}
+
+.bg-dark
+{
+	background-color: #111!important;
+	min-height: 55px;
+}
+
+.orange
+{
+	color: #ff6e00;
+}
+
+.green
+{
+	color: #6eff00;
+}
+
+#content img
+{
+    float: right;
+    height: 350px;
+    width: 500px;
+    margin-left: 60px;
+	margin-bottom: 15px;
+}
