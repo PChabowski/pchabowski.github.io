@@ -25,7 +25,8 @@ h3 {
 	line-height: 65px;
 	height: 65px;
 	text-align: center;
- }
+}
+ 
 .Topnav{
 	line-height: 2;
 	display: inline-block;
@@ -46,6 +47,17 @@ h3 {
 	margin-right: 5px;
 }
 
+.icon-menu{
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 26px;
+	padding: 3px;
+	margin: 5px;
+	
+}
+
+.icon-menu:hover{background-color: #5f7ca1;}
+
 .button:hover,
 .active
 {
@@ -63,6 +75,7 @@ h3 {
 
 #content
 {
+	text-align: center;	
 	width: 80%;
 	background-color: lightgrey;
 	border-radius: 3px;
@@ -74,12 +87,20 @@ h3 {
 
 #content article{
 	padding: 25px 55px;
-	text-align: center;
+
 }
+
 #content p
 {
 	color: #3f433f;
+	text-align: justify;
+	text-align-last: center;
 }
+
+#content p > a{
+	color: blue;
+	text-decoration: 1px underline;
+	cursor: pointer;}
 
 #content img
 {
