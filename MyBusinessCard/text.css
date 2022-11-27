@@ -1,0 +1,17 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body,html{
+	background-color: lightgrey;
+}
+p{
+	background-color: lightgrey;
+	color: #3f433f;
+}
+img {
+    float: right;
+    height: 350px;
+    width: 500px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+}
