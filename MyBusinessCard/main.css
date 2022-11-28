@@ -9,7 +9,7 @@ body, html
 h3 {
   letter-spacing: 5px;
   text-decoration: underline;
-  font: 24px "Lato", sans-serif;
+  font: 28px "Lato", sans-serif;
   font-weight: bold;
   color: #111;
   padding-bottom: 10px;
@@ -92,6 +92,10 @@ h3 {
 
 #content p
 {
+	font-size: 16px;
+	width: 65%;
+	margin: auto;
+	margin-bottom: 5px;
 	color: #3f433f;
 	text-align: justify;
 	text-align-last: center;
