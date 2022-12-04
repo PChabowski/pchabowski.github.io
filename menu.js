@@ -46,20 +46,18 @@ function menu(sw)
 			<!-- <a href=""><i class="icon-globe"></i></a> --> </div> \
 		</main>'
 	}
-	active();
+	active(num);
 }
 
-function active() {
+function active(ThePage) {
 	var btnTopnav = document.getElementById("Topnav");
 	var btns = btnTopnav.getElementsByClassName("button");
 	
+
 	for (var i = 0; i < btns.length; i++) {
-		btns[i].addEventListener("click", function() {
-			var current = document.getElementsByClassName("active");
-			current[0].className = current[0].className.replace(" active", "");
-			this.className += " active";
-		});
+		btns[i].className = "button";
 	}
+    btns[ThePage].className += " active";
 }
 
 function btnmenu(){
