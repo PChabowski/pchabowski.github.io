@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Curriculum Vitae</title>
+	<meta name="author" content="Paweł Chabowski"/>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/fontello.css">
+
+</head>
+<body>
+	<header class="bg-dark">
+		<nav>
+			<div class="menu">
+				<button class="icon-menu" onclick="btnmenu()" type="button"></button>
+				<div id="Topnav" class="Topnav clear">
+					<a class="button active" onclick="menu(0)" href="#content">Strona główna</a>
+					<a class="button" onclick="menu(1)" href="#content">O mnie</a>
+					<a class="button" onclick="menu(2)" href="#content">Projekty</a>
+					<a class="button" onclick="menu(3)" href="#content">Kontakt</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+	<div id="content">
+		<main>
+			<article>
+				<header>
+					<h3>Witaj, na mojej stronie!</h3>
+				</header>
+				
+				<figure>
+					<img src="img.jpg" width="300" height="220">
+					<figcaption>Paweł Chabowski</figcaption>
+				</figure>
+				
+				<p>Cześć, ja jestem Paweł. Od dłuższego czasu uczę sie HTMLa, CSSa i JavaScript, a stronę którą widzisz sam zrobiłem, właśnie w tych wymienionych technologiach. Myślę ze bardzo dobrze umiem HTML, CSS, a JSa cały czas się uczę. Mam zamiar w przyszłośći nauczyć się Reacta, ale to dopiero po większym zapoznaniu się z JS. Chwili obecnej mam zamiar założyć bloga informatycznego na którym będę się dzielił, własną zdobytą wiedzą na temat tych różnych technologi których się obecnie uczę. Bloga mam zamiar zrobić na WordPressie. Aczkolwiek nie za bardzo lubie sie z tą technologią WP, ale powoli się uczę. Małymi krokami zmierzam w kierunku Front-Endu. Po więcej informacji o mnie zapraszam <a onclick="menu(1)">tutaj.</a></p>
+
+				<div class="social clear">
+					<a href="https://www.facebook.com/profile.php?id=100007308978966" target="_blank"><i class="icon-facebook"></i></a>
+					<a href="https://www.instagram.com/rudo.brody.viking/" target="_blank"><i class="icon-instagram"></i></a>
+					<a href="https://github.com/PChabowski" target="_blank"><i class="icon-github-circled"></i></a>
+					<!-- <a href=""><i class="icon-globe"></i></a> -->
+				</div>
+			</article>
+		</main>
+	</div>
+	
+	<footer class="bg-dark">
+		<div>
+			<p>Copyraight &copy; 2022 All right reserved.</p>
+			<p>Paweł Chabowski</p>
+		</div>
+	</footer>
+	<script src="menu.js"></script>
+</body>
+</html>
