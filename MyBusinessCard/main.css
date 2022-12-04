@@ -14,6 +14,10 @@ h3 {
   color: #111;
   padding-bottom: 10px;
 }
+h2 {
+	margin-bottom: 0;
+	color: black;
+}
 
 .clear:after{
 	content: "";
@@ -23,7 +27,7 @@ h3 {
 
 .menu{
 	line-height: 65px;
-	height: 65px;
+	min-height: 65px;
 	text-align: center;
 }
  
@@ -35,28 +39,28 @@ h3 {
 
 .button
 {
-	display: block;
-	float: left;
-	width: 105px;
+	display: inline-block;
 	text-decoration: none;
 	color: rgba(255,255,255,.55);
 	letter-spacing: 2px;
 	font-size: 18px;
-	padding: 7px;
+	padding: 7px 20px;
 	margin-left: 5px;
 	margin-right: 5px;
 }
 
 .icon-menu{
+	display: none;
 	cursor: pointer;
+	width: 85px;
+	height: 70px;
 	border-radius: 5px;
-	font-size: 26px;
-	padding: 3px;
-	margin: 5px;
-	
+	font-size: 300%;
+	margin-top: 0;
+	padding: 0;
 }
 
-.icon-menu:hover{background-color: #5f7ca1;}
+.icon-menu:hover{background-color: #4f4f4f;}
 
 .button:hover,
 .active
@@ -65,7 +69,6 @@ h3 {
 	text-decoration: 2px underline;
 	border-radius: 5px;
 	color: #111;
-
 }
 
 .bg-dark
@@ -85,10 +88,7 @@ h3 {
 	box-shadow: 0px 0px 50px -8px rgba(0, 0, 0, 1);
 }
 
-#content article{
-	padding: 25px 55px;
-
-}
+#content article{padding: 25px 55px;}
 
 #content p
 {
@@ -122,6 +122,11 @@ h3 {
 	color: black;
 }
 
+.contact {
+    width: 65%;
+    margin: auto;
+}
+
 .social{
 	display: inline-block;
 	margin: 7px auto;
@@ -149,4 +154,38 @@ footer.bg-dark{
 	padding: 15px;
 	text-align: center;
 	font-size: 18px;
+}
+
+@media screen and (max-width: 1340px){
+	.Topnav{display: none;}
+	.menu{padding: 10px;}
+	.show, .icon-menu{display: block;}
+	.button{
+		float: none;
+		width: 50%;
+		margin: 15px auto;
+	}
+	.contact {
+    width: 95%;
+    margin: auto;
+	}
+}
+
+@media screen and (max-width: 700px){
+	#content {
+		width: 100%;
+		margin: 0;
+	}
+	#content img {
+    height: auto;
+    width: 90%;
+	}
+	.button {
+		width: 80%;
+		margin: 15px auto;
+	}
+	.contact {
+    width: 100%;
+    margin: auto;
+	}
 }
