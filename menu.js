@@ -64,9 +64,9 @@ function active() {
 
 function btnmenu(){
 	var x = document.getElementById("Topnav");
-	if(x.className == "Topnav clear"){
+	if(x.className == "Topnav"){
 		x.className += " show";
 	} else {
-		x.className = "Topnav clear";
+		x.className = "Topnav";
 	}
 }
