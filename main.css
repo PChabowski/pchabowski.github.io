@@ -42,6 +42,7 @@ h2 {
 	display: inline-block;
 	text-decoration: none;
 	color: rgba(255,255,255,.55);
+	cursor: pointer;
 	letter-spacing: 2px;
 	font-size: 18px;
 	padding: 7px 20px;
@@ -88,9 +89,9 @@ h2 {
 	box-shadow: 0px 0px 50px -8px rgba(0, 0, 0, 1);
 }
 
-#content article {
+.article {
     padding: 25px 55px;
-    display: none;
+	display: none;
 }
 
 #content p
