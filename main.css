@@ -42,7 +42,6 @@ h2 {
 	display: inline-block;
 	text-decoration: none;
 	color: rgba(255,255,255,.55);
-	cursor: pointer;
 	letter-spacing: 2px;
 	font-size: 18px;
 	padding: 7px 20px;
@@ -62,6 +61,7 @@ h2 {
 }
 
 .icon-menu:hover{background-color: #4f4f4f;}
+
 
 .button:hover,
 .active
@@ -90,8 +90,13 @@ h2 {
 }
 
 .article {
-    padding: 25px 55px;
 	display: none;
+	min-height: 578px;
+	padding: 25px 55px;
+}
+
+.show {
+	display: block;
 }
 
 #content p

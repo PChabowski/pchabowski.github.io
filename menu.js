@@ -1,13 +1,11 @@
-document.getElementById("defaultOpen").click();
-
 function onePage(pageName,elmnt) {
     let tabcontent = document.getElementsByClassName("article");
 	let btn = document.getElementsByClassName("button");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+        tabcontent[i].className = "article";
 		btn[i].className = "button";
 	}
-    document.getElementById(pageName).style.display = "block";
+    document.getElementById(pageName).className += " show";
 	elmnt.className += " active";
 }
 
@@ -20,19 +18,20 @@ function openMenu(){
 	}
 }
 
-window.onscroll = function () {scrollFunction()};
 
 function scrollFunction () {
 	let goTopBtn = document.getElementById("goTop");
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-	  goTopBtn.style.transition = "all 0.5s";
+		goTopBtn.style.transition = "all 0.5s";
 	  goTopBtn.style.display = "block";
 	} else {
-	  goTopBtn.style.transition = "all 0.5s";
-	  goTopBtn.style.display = "none";
+		goTopBtn.style.transition = "all 0.5s";
+		goTopBtn.style.display = "none";
 	}
 }
  function goTop () {
-   document.body.scrollTop = 0;
-   document.documentElement.scrollTop = 0;
-}
+	 document.body.scrollTop = 0;
+	 document.documentElement.scrollTop = 0;
+	}
+	
+window.onscroll = function () {scrollFunction()};
