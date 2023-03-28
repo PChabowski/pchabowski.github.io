@@ -62,6 +62,7 @@ h2 {
 
 .icon-menu:hover{background-color: #4f4f4f;}
 
+
 .button:hover,
 .active
 {
@@ -88,9 +89,14 @@ h2 {
 	box-shadow: 0px 0px 50px -8px rgba(0, 0, 0, 1);
 }
 
-#content article {
-    padding: 25px 55px;
-    display: none;
+.article {
+	display: none;
+	min-height: 578px;
+	padding: 25px 55px;
+}
+
+.show {
+	display: block;
 }
 
 #content p

@@ -1,24 +1,37 @@
-function showArticle(page) {
-    const articles = ["strona-glowna", "o-mnie", "projekty", "kontakt"];
-    for (let i = 0; i < articles.length; i++) {
-        document.getElementById(articles[i]).style.display = "none";
-}
-    document.getElementById(articles[page]).style.display = "block";
-    document.location.href = "#"+articles[page];
-
-	var btnTopnav = document.getElementById("Topnav");
-	var btns = btnTopnav.getElementsByClassName("button");
-	for (var i = 0; i < btns.length; i++) {
-		btns[i].className = "button";
+function onePage(pageName,elmnt) {
+    let tabcontent = document.getElementsByClassName("article");
+	let btn = document.getElementsByClassName("button");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].className = "article";
+		btn[i].className = "button";
 	}
-    btns[page].className += " active";
+    document.getElementById(pageName).className += " show";
+	elmnt.className += " active";
 }
 
-function btnmenu(){
-	var x = document.getElementById("Topnav");
-	if(x.className == "Topnav"){
-		x.className += " show";
+function openMenu(){
+	let menu = document.getElementById("Topnav");
+	if(menu.className == "Topnav"){
+		menu.className += " show";
 	} else {
-		x.className = "Topnav";
+		menu.className = "Topnav";
 	}
 }
+
+
+function scrollFunction () {
+	let goTopBtn = document.getElementById("goTop");
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		goTopBtn.style.transition = "all 0.5s";
+	  goTopBtn.style.display = "block";
+	} else {
+		goTopBtn.style.transition = "all 0.5s";
+		goTopBtn.style.display = "none";
+	}
+}
+ function goTop () {
+	 document.body.scrollTop = 0;
+	 document.documentElement.scrollTop = 0;
+	}
+	
+window.onscroll = function () {scrollFunction()};
