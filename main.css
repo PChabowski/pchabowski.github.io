@@ -1,46 +1,49 @@
-body, html
-{
+body, html {
 	background-color: #223247;
 	margin: 0;
 	font: 400 15px/1.8 "Lato", sans-serif;
 	color: #777;
 }
 
-h3 {
-  letter-spacing: 5px;
+h1 {
+  letter-spacing: 3px;
   text-decoration: underline;
-  font: 28px "Lato", sans-serif;
+  font: 32px "Lato", sans-serif;
   font-weight: bold;
   color: #111;
   padding-bottom: 10px;
 }
+
 h2 {
 	margin-bottom: 0;
 	color: black;
 }
 
-.clear:after{
-	content: "";
-	display: table;
-	clear: both;	
+header.bg-color {
+	margin-bottom: 45px;
 }
 
-.menu{
-	line-height: 65px;
+.bg-color {
+	background-color: #111;
+	flex-direction: column;
+}
+
+.menu {
 	min-height: 65px;
-	text-align: center;
-}
- 
-.Topnav{
-	line-height: 2;
-	display: inline-block;
-	vertical-align: middle;
+    flex-direction: column;
+    justify-content: center;
+	
 }
 
-.button
-{
-	display: inline-block;
+.Topnav {
+	flex-direction: row;
+	align-items: center;
+	align-self: center;
+}
+
+a.button {
 	text-decoration: none;
+	text-align: center;
 	color: rgba(255,255,255,.55);
 	letter-spacing: 2px;
 	font-size: 18px;
@@ -49,8 +52,11 @@ h2 {
 	margin-right: 5px;
 }
 
-.icon-menu{
+.icon-menu {
 	display: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
 	width: 85px;
 	height: 70px;
@@ -60,30 +66,25 @@ h2 {
 	padding: 0;
 }
 
-.icon-menu:hover{background-color: #4f4f4f;}
+.icon-menu:hover {background-color: #4f4f4f;}
 
-
-.button:hover,
-.active
-{
+a.button:hover,
+a.active {
 	background-color: lightgrey;
 	text-decoration: 2px underline;
 	border-radius: 5px;
 	color: #111;
 }
 
-.bg-dark
-{
-	background-color: #111;
-}
-
-#content
-{
-	text-align: center;	
+#content {
 	width: 80%;
+	flex-flow: column wrap;
+	text-align: center;
+	align-items: center;
 	background-color: lightgrey;
+	margin: auto;
+	padding: 25px 0;
 	border-radius: 3px;
-	margin: 40px auto;
     -webkit-box-shadow: 0px 0px 50px -8px rgba(0, 0, 0, 1);
 	-moz-box-shadow: 0px 0px 50px -8px rgba(0, 0, 0, 1);
 	box-shadow: 0px 0px 50px -8px rgba(0, 0, 0, 1);
@@ -91,61 +92,49 @@ h2 {
 
 .article {
 	display: none;
-	min-height: 578px;
-	padding: 25px 55px;
-}
-
-.show {
-	display: block;
-}
-
-#content p
-{
+	width: 65%;
 	font-size: 16px;
-	width: 90%;
-	margin: auto;
-	margin-bottom: 7px;
-	color: #3f433f;
-	text-align: justify;
-	text-align-last: center;
+	color: #444;
+	flex-flow: column wrap;
+	min-height: 576px;
 }
 
-#content p > a{
+#content,
+.bg-color,
+.menu,
+.Topnav,
+.social,
+.show {
+	display: flex;
+}
+
+.article a {
 	color: blue;
 	text-decoration: 1px underline;
-	cursor: pointer;}
-
-#content img
-{
+	cursor: pointer;
+}
+	
+.article img {
 	display: block;
 	margin: auto;
 	border-radius: 50%;
-    height: 350px;
-    width: 350px;
+	height: 350px;
+	width: 350px;
 }
 
-#content figcaption
-{
+.article figcaption {
 	margin-top: 10px;
 	font-size: 22px;
 	color: black;
 }
 
-.contact {
-    width: 65%;
-    margin: auto;
+.social {
+	margin: 7px 0;
 }
 
-.social{
-	display: inline-block;
-	margin: 7px auto;
-}
-
-.social a{
-	display: block;
+.social a {
 	margin: 2px 8px;
 	padding: 2px;
-	float: left;
 	font-size: 33px;
 	width: 55px;
 	height: 55px;
@@ -153,67 +142,66 @@ h2 {
 	color: black;
 }
 
-.social a:hover{
+.social a:hover {
 	background-color: #1b2839;
 	border-radius: 50%;
 	color: #d3d3d3;
 }
 
-footer.bg-dark{
-	padding: 15px;
+footer.bg-color {
 	text-align: center;
 	font-size: 18px;
+	padding: 15px;
+	margin-top: 45px;
 }
 
 @media screen and (max-width: 1340px){
-	.Topnav{display: none;}
-	.menu{padding: 10px;}
-	.show, .icon-menu{display: block;}
-	.button{
-		float: none;
-		width: 50%;
-		margin: 15px auto;
+	.Topnav{
+		display: none;
+		flex-direction: column;
 	}
-	.contact {
-    width: 95%;
-    margin: auto;
+	
+	.menu{padding: 10px;}
+	.button{margin: 15px;}
+	
+	.show, 
+	.icon-menu {
+		display: flex;
 	}
 }
 
 @media screen and (max-width: 700px){
-	#content {
-		width: 100%;
+	#content,
+	header.bg-color,
+	footer.bg-color {
 		margin: 0;
 	}
-	#content img {
-    height: auto;
-    width: 90%;
-	}
-	.button {
-		width: 80%;
-		margin: 15px auto;
-	}
-	.contact {
-    width: 100%;
-    margin: auto;
+
+	#content {width: 100%;}
+	
+	.Topnav {align-items: stretch;}
+
+	.article img {
+    	height: auto;
+    	width: 90%;
 	}
 }
 
 #goTop {
   display: none;
+  width: 65px;
+  height: 65px;
   position: fixed;
-  bottom: 15px;
-  right: 15px;
-  z-index: 99;
+  bottom: 20px;
+  right: 20px;
   font-size: 18px;
   border: none;
-  outline: none;
   background-color: #55555599;
   color: white;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+  border-radius: 5px;
   transition: all 0.5s;
+  z-index: 99;
 }
 
 #goTop:hover {
