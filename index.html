@@ -29,7 +29,7 @@
 			<h1>Witaj, na mojej stronie!</h1>
 		</header>
 		<figure>
-			<img src="img.jpg" width="300" height="220">
+			<img class="author" src="img.jpg" width="300" height="220">
 			<figcaption>Paweł Chabowski</figcaption>
 		</figure>
         <p>Cześć, nazywam się Paweł. Od dłuższego czasu uczę sie HTMLa, CSSa i JavaScript, a stronę którą widzisz sam stworzyłem. Myślę że śmiało moge stwierdzić że dobrzę potrafie HTML, CSS, lecz na tej wiedzy nie poprzestaję. Obecnie między czasie jak to możliwe uczę się JavaScritpu. Mam zamiar w przyszłośći nauczyć się Reacta, ale to dopiero po większym zapoznaniu się z JS. Chwili obecnej mam zamiar założyć bloga informatycznego na którym będę się dzielił, własną wiedzą na temat programowania. Bloga mam zamiar zrobić na WordPressie. Szczerze po zapoznaniu się z WordPressem, stwierdzam że to nawet całkiem ciekawy system do zarządania treścią na swojej stronie. Małymi krokami zmierzam w kierunku Front-Endu. A po więcej informacji o mnie zapraszam  <a onclick="onePage('o-mnie', about)" href="#o-mnie">tutaj.</a></p>
@@ -39,28 +39,44 @@
         <h1>O mnie</h1>
       </header>
       <figure>
-        <img src="img.jpg" width="300" height="220">
+        <img class="author" src="img.jpg" width="300" height="220">
         <figcaption>Paweł Chabowski</figcaption>
       </figure>
       <p>Cześć, nazywam się Paweł. Od dłuższego czasu uczę sie HTMLa, CSSa i JavaScript, a stronę którą widzisz sam stworzyłem. Myślę że śmiało moge stwierdzić że dobrzę potrafie HTML, CSS, lecz na tej wiedzy nie poprzestaję. Obecnie między czasie jak to możliwe uczę się JavaScritpu. Mam zamiar w przyszłośći nauczyć się Reacta, ale to dopiero po większym zapoznaniu się z JS. Chwili obecnej mam zamiar założyć bloga informatycznego na którym będę się dzielił, własną wiedzą na temat programowania. Bloga mam zamiar zrobić na WordPressie. Szczerze po zapoznaniu się z WordPressem, stwierdzam że to nawet całkiem ciekawy system do zarządania treścią na swojej stronie. Małymi krokami zmierzam w kierunku Front-Endu.</p>
 
       <p>Po za tym że uwilbiam się uczyć i rozwijać. Mam też inne zainteresowania, np. uwielbiam grać na gitarz, i zarówno tak jak przy programowaniu i przy graniu na gitarze, to i przy jednym, jak i drugim potrafię się zatracić na wiele godzin. Mówię sobie, pogram sobie chwile na gitarze, albo zaprojektuję strone. I ta chwila mija, mija i tak patrzysz na zegar i widzisz jak mineło kilka godziny, i się zastanawiasz jak ten czas mógł tak szybko minąć? przecież to była zaledwie chwila, a tu czas iść do pracy albo innymi obowiązkami się zająć.</p>
 
-      <p>Również po za uczeniem się i samorozwojem, lubie też iść sobie po biegać, albo przejść się na spacer. Ostanimi czasy zaczynam czytać więcej książek, a nawet też rozwiązuje sudoku, coraz częściej widzę jak rozwiązywanie sudoku pomaga przy rozwiązywaniu problemów przy programowaniu, i nie tylko przy programowaniu. Uwielbiam też czasami spisywać własne myśli i spostrzeżenia na temat życia, którymi rzadziej dzielę się na swoim obecnym, blogu o <a href="https://symbolicthelightoflife.blogspot.com/" target="_blank">tutaj.</a> Myślę że to by było już, na tyle o mnie. Dziękuję za uwage;)</p>
+      <p>Również po za uczeniem się i samorozwojem, lubie też iść sobie po biegać, albo przejść się na spacer. Ostanimi czasy zaczynam czytać więcej książek, a nawet też rozwiązuje sudoku, coraz częściej widzę jak rozwiązywanie sudoku pomaga przy rozwiązywaniu problemów przy programowaniu, i nie tylko przy programowaniu. Uwielbiam też czasami spisywać własne myśli i spostrzeżenia na temat życia, którymi rzadziej dzielę się na swoim obecnym, blogu o 5 Myślę że to by było już, na tyle o mnie. Dziękuję za uwage;)</p>
     </article>
     <article class="article" id="projekty">
       <header>
         <h1>Moje Projekty</h1>
         <h2>Moja strona</h2>
       </header>
+	  <img src="img/project.png" width="650" height="400">
       <p>
       Strone którą widzisz jest moim pierwszym projektem publiczny, który w początkowej fazie wykonałem z pomocą Bootstrapa5, HMTLa, CSSa i JavaScript. Ale w końcowej fazie wywaliłem BS5, ponieważ ten framework mi nie odpowiada pod wieloma względami, chociażby miedzy innymi takim że momentami jak chcesz cos zmienić wyglądzie strony to musisz użyć klazuli <code>!important</code>. I tak właśnie obecnie prezentuje się moja strona bez BS5.
       </p>
-      <header>
-        <h2>O to kolejny projekt</h2>
-        <p>informacje o kolejny projekcie.</p>
-      </header>
+	  
+		<header>
+			<h2>CSS Flexbox - Tutorial </h2>
+		</header>
+		<img src="img/project2.png" width="650" height="400">
+        <p>Jest to Polska wersja tutoriala jak korzystać z CSS flexbox i jego właściwości. Projekt jest jeszcze nieskonczony, jakby ktoś chciał pomóc to zapraszam do kontaktu:) Tu <a href="https://pchabowski.github.io/CSS-flexbox-tutorial/" target="_blank">link</a> do projektu.</p>
+		
+		<header>
+			<h2>Battleship.JS</h2>
+		</header>
+		<img src="img/project1.png" width="650" height="400">
+		<p>Gra w Okręty - Gra jest zrobiona z książki "Rusz głową Programowanie w JavaScript" w grze dodałem możliwość oddawania strzałów z małych liter, jak i też nieco zmodifikowałem wygląd samej gry. Tu <a href="https://pchabowski.github.io/Battleship.JS/" target="_blank">link</a> do projektu.</p>
+		
+		<header>
+			<h2>MyGalleryJS</h2>
+		</header>
+		<img src="img/project3.png" width="650" height="400">
+		<p>Galeria zdjęć zrobiona przez mnie, bo byłem ciekaw czy tak sie da, mam zamiar troche bardziej przy niej poskubać i zrobić ją bardziej modalną. Wszystkie zdjęcia z galerii są należa do mnie i zostały wykonane przez tego o to <a href="https://www.facebook.com/profile.php?id=100012980832758" target="_blank">Pana</a> Wojciecha. A o to <a href="https://pchabowski.github.io/MyGalleryJS/" target="_blank">link</a> do projektu.</p>
     </article>
+	
     <article class="article" id="kontakt">
       <header>
         <h1>Kontak do mnie</h1>
@@ -85,15 +101,19 @@
           <i class="icon-github-circled">
           </i>
         </a>
+		<a href="https://www.linkedin.com/in/pawe%C5%82-chabowski/" target="_blank">
+          <i class="icon-linkedin-squared">
+         </i>
+        </a>
 		</div>
 	</main>
 	<footer class="bg-color">
     <div>
-      <p>Copyraight &copy; 2022 All right reserved.</p>
-			<p>Paweł Chabowski</p>
-		</div>
+		<p>Copyraight &copy; 2022 All right reserved.</p>
+		<p>Paweł Chabowski</p>
+	</div>
 	</footer>
-  <button onclick="goTop()" id="goTop" title="Go to top"><span>↑</span></button>
+	<button onclick="goTop()" id="goTop" title="Go to top"><span>↑</span></button>
 	<script src="menu.js"></script>
 </body>
 </html>
