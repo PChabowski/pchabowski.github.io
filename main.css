@@ -114,12 +114,16 @@ a.active {
 	cursor: pointer;
 }
 	
-.article img {
+.author {
 	display: block;
 	margin: auto;
 	border-radius: 50%;
 	height: 350px;
 	width: 350px;
+}
+
+article img {
+    align-self: center;
 }
 
 .article figcaption {
