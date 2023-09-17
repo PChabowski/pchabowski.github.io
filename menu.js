@@ -11,11 +11,13 @@ const header = ['strona-glowna', 'o-mnie', 'projekty', 'kontakt'];
 window.onscroll = function() {scrollFunction()};
 window.onload = function() {
 	const btnGoTop = document.getElementById("goTop");
+	btnGoTop.onclick = goTop;
+
 	const btnOpenMenu = document.getElementById("open-menu");
+	btnOpenMenu.onclick = openMenu;
+	
 	const topnav = document.getElementById("Topnav");
 	const linkMenu = topnav.getElementsByTagName("a");
-	btnGoTop.onclick = goTop;
-	btnOpenMenu.onclick = openMenu;
 	for(let i=0; header.length; i++) {
 		linkMenu[i].onclick = onePage(header[i], linkMenu[i]);
 	}
