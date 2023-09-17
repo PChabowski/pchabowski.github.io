@@ -15,10 +15,10 @@ window.onload = function() {
 
 	const btnOpenMenu = document.getElementById("open-menu");
 	btnOpenMenu.onclick = openMenu;
-	
+
 	const topnav = document.getElementById("Topnav");
 	const linkMenu = topnav.getElementsByTagName("a");
 	for(let i=0; header.length; i++) {
-		linkMenu[i].onclick = onePage(header[i], linkMenu[i]);
+		linkMenu[i].onclick = onePage(header[i], this);
 	}
 };
