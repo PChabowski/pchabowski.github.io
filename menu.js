@@ -16,7 +16,7 @@ window.onload = function() {
 	const linkMenu = topnav.document.getElementByTagName("a");
 	btnGoTop.onclick = goTop;
 	btnOpenMenu.onclick = openMenu;
-	for(let i=0; linkMenu.length; i++) {
+	for(let i=0; header.length; i++) {
 		linkMenu[i].onclick = onePage(header[i], this);
 	}
 };
