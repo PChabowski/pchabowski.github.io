@@ -9,4 +9,9 @@ function scrollFunction() {
 	}
 }
 
+export function goTop() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
+
 export default scrollFunction;
