@@ -1,7 +1,7 @@
 function onePage(pageName,elmnt) {
 	let tabcontent = document.getElementsByClassName("article");
 	let btn = document.getElementsByClassName("button");
-    for (i = 0; i < tabcontent.length; i++) {
+    for (let i = 0; i < tabcontent.length; i++) {
         tabcontent[i].className = "article";
 		btn[i].className = "button";
 	}
