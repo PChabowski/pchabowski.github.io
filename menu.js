@@ -17,6 +17,6 @@ window.onload = function() {
 	btnGoTop.onclick = goTop;
 	btnOpenMenu.onclick = openMenu;
 	for(let i=0; header.length; i++) {
-		linkMenu[i].onclick = onePage(header[i], this);
+		linkMenu[i].onclick = onePage(header[i], linkMenu[i]);
 	}
 };
