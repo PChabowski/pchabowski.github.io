@@ -15,10 +15,10 @@
 		<nav class="menu">
 			<button id="open-menu" class="icon-menu" type="button"></button>
 			<div id="Topnav" class="Topnav">
-        <a class="button ative" id="defaultOpen" href="#strona-glowna">Strona główna</a>
-        <a class="button" id="about" href="#o-mnie">O mnie</a>
-        <a class="button" href="#projekty">Projekty</a>
-        <a class="button" href="#kontakt">Kontakt</a>
+        <a class="button ative" onclick="onePage('strona-glowna', this)" id="defaultOpen" href="#strona-glowna">Strona główna</a>
+        <a class="button" onclick="onePage('o-mnie', this)" id="about" href="#o-mnie">O mnie</a>
+        <a class="button" onclick="onePage('projekty', this)" href="#projekty">Projekty</a>
+        <a class="button" onclick="onePage('kontackt', this)" href="#kontakt">Kontakt</a>
 			</div>
 		</nav>
 	</header>
@@ -28,7 +28,7 @@
 			<h1>Witaj, na mojej stronie!</h1>
 		</header>
 		<figure>
-			<img class="author" src="img.jpg" width="300" height="220">
+			<img class="author" onclick="goTop()" src="img.jpg" width="300" height="220">
 			<figcaption>Paweł Chabowski</figcaption>
 		</figure>
         <p>Cześć, nazywam się Paweł. Od dłuższego czasu uczę sie HTMLa, CSSa i JavaScript, a stronę którą widzisz sam stworzyłem. Myślę że śmiało moge stwierdzić że dobrzę potrafie HTML, CSS, lecz na tej wiedzy nie poprzestaję. Obecnie między czasie jak to możliwe uczę się JavaScritpu. Mam zamiar w przyszłośći nauczyć się Reacta, ale to dopiero po większym zapoznaniu się z JS. Chwili obecnej mam zamiar założyć bloga informatycznego na którym będę się dzielił, własną wiedzą na temat programowania. Bloga mam zamiar zrobić na WordPressie. Szczerze po zapoznaniu się z WordPressem, stwierdzam że to nawet całkiem ciekawy system do zarządania treścią na swojej stronie. Małymi krokami zmierzam w kierunku Front-Endu. A po więcej informacji o mnie zapraszam  <a onclick="onePage('o-mnie', about)" href="#o-mnie">tutaj.</a></p>
@@ -114,6 +114,6 @@
 	</footer>
 	<button id="goTop" title="Go to top"><span>↑</span></button>
 
-	<script type="module" src="menu.js"></script>
+	<script type="module" src="main.js"></script>
 </body>
 </html>
