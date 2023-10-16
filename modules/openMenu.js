@@ -6,4 +6,10 @@ function openMenu() {
 		menu.className = "Topnav";
 	}
 }
-export default openMenu;
+
+function initOpenMenu() {
+	const btnOpenMenu = document.getElementById('open-menu');
+	btnOpenMenu.onclick = openMenu;
+}
+
+export { initOpenMenu };

@@ -121,6 +121,7 @@ a.active {
 }
 
 #content,
+#goTop.show,
 .bg-color,
 .menu,
 .Topnav,
@@ -223,22 +224,23 @@ footer.bg-color {
 }
 
 #goTop {
-	display: none;
-	width: 65px;
-	height: 65px;
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	font-size: 18px;
-	border: none;
+	align-items: center;
 	background-color: var(--background-gray-transparent);
+	border: none;
+	border-radius: 5px;
+	bottom: 20px;
 	color: var(--text-white-color);
 	cursor: pointer;
-	border-radius: 5px;
+	display: none;
+	font-size: 18px;
+	height: 65px;
+	justify-content: center;
+	position: fixed;
+	right: 20px;
 	transition: all 0.5s;
+	width: 65px;
 	z-index: 99;
 }
-
 #goTop:hover {
 	background-color: var(--background-red-transparent);
 }
