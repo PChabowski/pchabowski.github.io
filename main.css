@@ -172,6 +172,11 @@ footer.bg-color {
 	.icon-menu {
 		display: flex;
 	}
+
+	.article img {
+    	height: auto;
+    	width: 90%;
+	}
 }
 
 @media screen and (max-width: 700px){
@@ -181,13 +186,17 @@ footer.bg-color {
 		margin: 0;
 	}
 
-	#content {width: 100%;}
-	
-	.Topnav {align-items: stretch;}
-
-	.article img {
+	.author {
     	height: auto;
-    	width: 90%;
+    	width: 100%;
+	}
+
+	#content {
+		width: 100%; 
+	}
+	
+	.Topnav {
+		align-items: stretch;
 	}
 }
 
