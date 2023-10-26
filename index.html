@@ -9,18 +9,17 @@
 
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="css/fontello.css">
-
 </head>
   <body>
 	<header class="bg-color">
 		<nav class="menu">
-				<button class="icon-menu" onclick="openMenu()" type="button"></button>
-				<div id="Topnav" class="Topnav">
-            <a class="button ative" id="defaultOpen" onclick="onePage('strona-glowna', this)" href="#strona-glowna">Strona główna</a>
-            <a class="button" id="about" onclick="onePage('o-mnie', this)" href="#o-mnie">O mnie</a>
-            <a class="button" onclick="onePage('projekty', this)" href="#projekty">Projekty</a>
-            <a class="button" onclick="onePage('kontakt', this)" href="#kontakt">Kontakt</a>
-				</div>
+			<button id="open-menu" class="icon-menu" type="button"></button>
+			<div id="Topnav" class="Topnav">
+        <a class="button active" href="#strona-glowna">Strona główna</a>
+        <a class="button" href="#o-mnie">O mnie</a>
+        <a class="button" href="#projekty">Projekty</a>
+        <a class="button" href="#kontakt">Kontakt</a>
+			</div>
 		</nav>
 	</header>
 	<main id="content">
@@ -29,7 +28,7 @@
 			<h1>Witaj, na mojej stronie!</h1>
 		</header>
 		<figure>
-			<img class="author" src="img.jpg" width="300" height="220">
+			<img class="author" onclick="goTop()" src="img.jpg" width="300" height="220">
 			<figcaption>Paweł Chabowski</figcaption>
 		</figure>
         <p>Cześć, nazywam się Paweł. Od dłuższego czasu uczę sie HTMLa, CSSa i JavaScript, a stronę którą widzisz sam stworzyłem. Myślę że śmiało moge stwierdzić że dobrzę potrafie HTML, CSS, lecz na tej wiedzy nie poprzestaję. Obecnie między czasie jak to możliwe uczę się JavaScritpu. Mam zamiar w przyszłośći nauczyć się Reacta, ale to dopiero po większym zapoznaniu się z JS. Chwili obecnej mam zamiar założyć bloga informatycznego na którym będę się dzielił, własną wiedzą na temat programowania. Bloga mam zamiar zrobić na WordPressie. Szczerze po zapoznaniu się z WordPressem, stwierdzam że to nawet całkiem ciekawy system do zarządania treścią na swojej stronie. Małymi krokami zmierzam w kierunku Front-Endu. A po więcej informacji o mnie zapraszam  <a onclick="onePage('o-mnie', about)" href="#o-mnie">tutaj.</a></p>
@@ -110,10 +109,11 @@
 	<footer class="bg-color">
     <div>
 		<p>Copyraight &copy; 2022 All right reserved.</p>
-		<p>Paweł Chabowski</p>
+		<p id="demo"></p>
 	</div>
 	</footer>
-	<button onclick="goTop()" id="goTop" title="Go to top"><span>↑</span></button>
-	<script src="menu.js"></script>
+	<button id="goTop" title="Go to top"><span>↑</span></button>
+
+	<script type="module" src="main.js"></script>
 </body>
 </html>
