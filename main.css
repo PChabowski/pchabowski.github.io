@@ -1,251 +1,115 @@
 :root {
-	--background-primary-color: #223247;
-	--background-secondary-color: lightgrey;
-	--background-gray: #4f4f4f;
-	--background-darkblue: #1b2839;
-	--background-gray-transparent: rgba(85, 85, 85, 0.6);
-	--background-red-transparent: rgba(255, 0, 0, 0.6);
-	--heading-primary-color: #111;
-	--heading-secondary-color: black;
-	--text-primary-color: #777;
-	--text-secondary-color: rgba(255, 255, 255, 0.55);
-	--text-lightgray-color: #d3d3d3;
-	--text-darkgray-color: #444;
-	--text-white-color: white;
-	--link-color: blue;
-	--background-color-menu: #4f4f4f;
-	--shadow-box-color: rgba(0, 0, 0, 1);
+	--background-color-primary: gray;
+	--background-color-secondary: white;
+	--background-color-gray: #ddd;
+	--background-color-test: #aaa;
+	--background-color-menu: #333;
+	--text-link-color: #f2f2f2;
+	--text-link-color-hover: black;
+
 }
 
-body,
-html {
-	background-color: var(--background-primary-color);
-	color: var(--text-primary-color);
-	margin: 0;
-	font: 400 15px/1.8 "Lato", sans-serif;
+* {
+	box-sizing: border-box;
 }
 
-h1 {
-	color: var(--heading-primary-color);
-	letter-spacing: 3px;
-	text-decoration: underline;
-	font: 32px "Lato", sans-serif;
-	font-weight: bold;
-	padding-bottom: 10px;
+body {
+	background-color: var(--background-color-primary);
+	font-family: Arial;
+	padding: 10px;
 }
 
-h2 {
-	color: var(--heading-secondary-color);
-	margin-bottom: 0;
-}
-
-header.bg-color {
-	margin-bottom: 45px;
-}
-
-.bg-color {
-	background-color: var(--heading-primary-color);
-	flex-direction: column;
-}
-
-.menu {
-	min-height: 65px;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.Topnav {
-	flex-direction: row;
-	align-items: center;
-	align-self: center;
-}
-
-a.button {
-	text-decoration: none;
+/* Header/Blog Title */
+.header {
+	padding: 30px;
 	text-align: center;
-	color: var(--text-secondary-color);
-	letter-spacing: 2px;
-	font-size: 18px;
-	padding: 7px 20px;
-	margin-left: 5px;
-	margin-right: 5px;
+	background-color: var(--background-color-secondary);
 }
 
-.icon-menu {
-	display: none;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	width: 85px;
-	height: 70px;
-	border-radius: 5px;
-	font-size: 300%;
-	margin-top: 0;
-	padding: 0;
+.header h1 {
+	font-size: 50px;
 }
 
-.icon-menu:hover {
+/* Style the top navigation bar */
+.topnav {
+	display: flex;
+	overflow: hidden;
 	background-color: var(--background-color-menu);
 }
 
-a.button:hover,
-a.active {
-	color: var(--heading-primary-color);
-	background-color: var(--background-secondary-color);
-	text-decoration: 2px underline;
-	border-radius: 5px;
-}
-
-#content {
-	width: 80%;
-	flex-flow: column wrap;
+/* Style the topnav links */
+.topnav a {
+	color: var(--text-link-color);
 	text-align: center;
-	align-items: center;
-	background-color: var(--background-secondary-color);
-	margin: auto;
-	padding: 25px 0;
-	border-radius: 3px;
-	-webkit-box-shadow: 0px 0px 50px -8px var(--shadow-box-color);
-	-moz-box-shadow: 0px 0px 50px -8px var(--shadow-box-color);
-	box-shadow: 0px 0px 50px -8px var(--shadow-box-color);
-}
-
-.article {
-	display: none;
-	width: 65%;
-	font-size: 16px;
-	color: var(--text-darkgray-color);
-	flex-flow: column wrap;
-	min-height: 576px;
-}
-
-#content,
-#goTop.show,
-.bg-color,
-.menu,
-.Topnav,
-.social,
-.show {
-	display: flex;
-}
-
-.article a {
-	color: var(--link-color);
-	text-decoration: 1px underline;
-	cursor: pointer;
-}
-
-.author {
-	display: block;
-	margin: auto;
-	border-radius: 50%;
-	height: 350px;
-	width: 350px;
-}
-
-article img {
-	align-self: center;
-}
-
-.article figcaption {
-	color: var(--heading-secondary-color);
-	margin-top: 10px;
-	font-size: 22px;
-}
-
-.social {
-	margin: 7px 0;
-}
-
-.social a {
-	color: var(--heading-secondary-color);
-	margin: 2px 8px;
-	padding: 2px;
-	font-size: 33px;
-	width: 55px;
-	height: 55px;
+	padding: 14px 16px;
 	text-decoration: none;
 }
 
-.social a:hover {
-	color: var(--text-lightgray-color);
-	background-color: var(--background-darkblue);
-	border-radius: 50%;
+/* Change color on hover */
+.topnav a:hover {
+	background-color: var(--background-color-gray);
+	color: var(--text-link-color-hover);
 }
 
-footer.bg-color {
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+	flex-grow: 8;
+	flex-basis: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+	flex-shrink: 0;
+	flex-basis: 25%;
+	padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+	background-color: var(--background-color-test);
+	width: 100%;
+	padding: 20px;
+}
+
+/* real img*/
+img.fakeimg {
+	height: auto;
+	padding: 0;
+}
+
+/* Add a card effect for articles */
+.card {
+	background-color: var(--background-color-secondary);
+	padding: 20px;
+	margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+/* Footer */
+.footer {
+	padding: 20px;
 	text-align: center;
-	font-size: 18px;
-	padding: 15px;
-	margin-top: 45px;
+	background-color: var(--background-color-gray);
+	margin-top: 20px;
 }
 
-@media screen and (max-width: 1340px) {
-	.Topnav {
-		display: none;
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+	.topnav,
+	.row {
 		flex-direction: column;
 	}
 
-	.menu {
-		padding: 10px;
+	.leftcolumn,
+	.rightcolumn {
+		padding: 0;
 	}
-
-	.button {
-		margin: 15px;
-	}
-
-	.show,
-	.icon-menu {
-		display: flex;
-	}
-
-	.article img {
-    	height: auto;
-    	width: 90%;
-	}
-}
-
-@media screen and (max-width: 700px) {
-
-	#content,
-	header.bg-color,
-	footer.bg-color {
-		margin: 0;
-	}
-
-	#content {
-		width: 100%;
-	}
-
-	.Topnav {
-		align-items: stretch;
-	}
-
-	.author {
-    	height: auto;
-    	width: 100%;
-	}
-}
-
-#goTop {
-	align-items: center;
-	background-color: var(--background-gray-transparent);
-	border: none;
-	border-radius: 5px;
-	bottom: 20px;
-	color: var(--text-white-color);
-	cursor: pointer;
-	display: none;
-	font-size: 18px;
-	height: 65px;
-	justify-content: center;
-	position: fixed;
-	right: 20px;
-	transition: all 0.5s;
-	width: 65px;
-	z-index: 99;
-}
-#goTop:hover {
-	background-color: var(--background-red-transparent);
 }
