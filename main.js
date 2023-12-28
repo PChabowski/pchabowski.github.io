@@ -1,9 +1,8 @@
-import person from "./modules/person.js";
-import { initSFunAndGoTop } from "./modules/scrollFunction.js";
+//import { initSFunAndGoTop } from "./modules/scrollFunction.js";
 import { initOpenMenu } from "./modules/openMenu.js";
 import { initOnePage } from "./modules/onePage.js";
 
-fetch('date/person.json')
+fetch('http://localhost/Moja%20strona/date/person.json')
     .then(response => response.json())
     .then(data => {
         const persons = data.person;
@@ -21,8 +20,8 @@ fetch('date/person.json')
     });
 
 window.onload = function () {
-	document.getElementById("demo").innerHTML = person.name;
-	initSFunAndGoTop();
-	initOpenMenu();
-	initOnePage();
+	//document.getElementById("demo").innerHTML = person.name;
+	//initSFunAndGoTop();
+	//initOpenMenu();
+	//initOnePage();
 };

@@ -1,0 +1,12 @@
+/* Right column */
+.leftcolumn,
+.rightcolumn {
+	align-self: center;
+	width: 80%;
+	padding-left: 0;
+}
+
+/* Clear floats after the columns */
+.row {
+	flex-direction: column;
+}

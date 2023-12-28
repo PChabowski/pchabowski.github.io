@@ -13,32 +13,51 @@
 	box-sizing: border-box;
 }
 
-body {
+html, body {
+	align-items: center;
 	background-color: var(--background-color-primary);
+	display: flex;
 	font-family: Arial;
-	padding: 10px;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	margin: 0;
 }
 
-/* Header/Blog Title */
-.header {
-	padding: 30px;
-	text-align: center;
-	background-color: var(--background-color-secondary);
-}
-
-.header h1 {
+h1 {
 	font-size: 50px;
 }
 
-/* Style the top navigation bar */
-.topnav {
+div.conteiner {
 	display: flex;
-	overflow: hidden;
-	background-color: var(--background-color-menu);
+	height: 666px;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 1366px;
 }
 
-/* Style the topnav links */
-.topnav a {
+
+main.content {
+	height: 100%;
+	display: flex;
+	text-align: center;
+	background-color: var(--background-color-secondary);
+	border-radius: 5px 5px 0px 0px;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 60px 75px;
+}
+
+/* Style the bottom navigation bar */
+.bottomnav {
+	background-color: var(--background-color-menu);
+	border-radius: 0px 0px 5px 5px;
+	display: flex;
+	justify-content: center;
+}
+
+/* Style the bottomnav links */
+.bottomnav a {
 	color: var(--text-link-color);
 	text-align: center;
 	padding: 14px 16px;
@@ -46,70 +65,23 @@ body {
 }
 
 /* Change color on hover */
-.topnav a:hover {
+.bottomnav a:hover {
 	background-color: var(--background-color-gray);
 	color: var(--text-link-color-hover);
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-	flex-grow: 8;
-	flex-basis: 75%;
+.social-media {
+    display: flex;
+    justify-content: center;
 }
 
-/* Right column */
-.rightcolumn {
-	flex-shrink: 0;
-	flex-basis: 25%;
-	padding-left: 20px;
+.social-media a {
+    text-decoration: none;
+    color: #00686b;
+    font-size: 38px;
+    padding: 12px;
 }
 
-/* Fake image */
-.fakeimg {
-	background-color: var(--background-color-test);
-	width: 100%;
-	padding: 20px;
-}
-
-/* real img*/
-img.fakeimg {
-	height: auto;
-	padding: 0;
-}
-
-/* Add a card effect for articles */
-.card {
-	background-color: var(--background-color-secondary);
-	padding: 20px;
-	margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row {
-	display: flex;
-	align-items: stretch;
-	flex-wrap: wrap;
-}
-
-/* Footer */
-.footer {
-	padding: 20px;
-	text-align: center;
-	background-color: var(--background-color-gray);
-	margin-top: 20px;
-}
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-
-	.topnav,
-	.row {
-		flex-direction: column;
-	}
-
-	.leftcolumn,
-	.rightcolumn {
-		padding: 0;
-	}
-}
+@media screen and (max-width: 800px) {}
