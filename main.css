@@ -63,7 +63,7 @@ main.content {
 	background-color: var(--background-color-secondary);
 	display: flex;
 	flex-direction: column;
-	/* height: 90vh; */
+	min-height: 90vh;
 	padding: 20px;
 	text-align: justify;
 	justify-content: space-evenly;
