@@ -1,55 +1,36 @@
-div.conteiner {
-	height: 666px;
-	max-width: 1366px;
-	display: flex;
-	flex-direction: column;
+/* @media only screen and (min-width: 800px) // taka powinna byc wersja dla mobilek moj telefon ma 792px szerokosci */
+@media only screen and (min-width: 900px) {
+	body {
+		min-height: 100vh;
+		justify-content: space-between;
+	}
+	header.main:first-child {
+		visibility: hidden;
+	}
+	div.conteiner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 1366px;
+	}
+	main.content {
+		border-radius: 5px 5px 0px 0px;
+		min-height: 666px;
+		padding: 60px 75px;
+		text-align: center;
+	}
+	div.conteiner > header.main {
+		border-radius: 0px 0px 5px 5px;
+		display: block;
+	}
+	.bottomnav {
+		justify-content: center;
+	}
+	.bottomnav a {
+		width: 150px;
+	}
+	footer.main {
+		background-color: transparent;
+	}
+
 }
-
-main.content {
-	height: 100%;
-	display: flex;
-	text-align: center;
-	background-color: var(--background-color-secondary);
-	border-radius: 5px 5px 0px 0px;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 60px 75px;
-}
-
-/* Style the bottom navigation bar */
-.bottomnav {
-	background-color: var(--background-color-menu);
-	border-radius: 0px 0px 5px 5px;
-	display: flex;
-	justify-content: center;
-}
-
-/* Style the bottomnav links */
-.bottomnav a {
-	color: var(--text-link-color);
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-/* Change color on hover */
-.bottomnav a:hover {
-	background-color: var(--background-color-gray);
-	color: var(--text-link-color-hover);
-}
-
-.social-media {
-    /* display: flex; */
-    /* justify-content: center; */
-}
-
-.social-media a {
-    text-decoration: none;
-    color: #00686b;
-    font-size: 38px;
-    padding: 12px;
-}
-
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {}
