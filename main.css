@@ -47,7 +47,8 @@ header.main {
 }
 
 .topnav a,
-.bottomnav a {
+.bottomnav a,
+.contact a {
 	color: var(--text-link-color);
 	text-decoration: none;
 	padding: 14px 8px;
@@ -71,6 +72,23 @@ main.content {
 
 header.title {
     text-align: center;
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .fa {
+	font-size: 1.6em;
+}
+
+.contact a {
+	font-size: 1.1em;
+    color: var(--text-link-color-hover);
+}
+.contact a:hover {
+    text-decoration: underline;
 }
 
 .social-media {
