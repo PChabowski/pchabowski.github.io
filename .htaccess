@@ -6,6 +6,5 @@ Deny from all
 
 RewriteEngine on
 RewriteRule programista-frontendowy index.html
-RewriteRule projekty project.html
-RewriteRule szablony-www template.html
 RewriteRule kontak-do-mnie contact.html
+RewriteRule strona-w-tracie-pracy prace.html
