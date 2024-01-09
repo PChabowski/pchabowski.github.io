@@ -1,12 +1,11 @@
-/* Right column */
-.leftcolumn,
-.rightcolumn {
-	align-self: center;
-	width: 80%;
-	padding-left: 0;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
 }
 
-/* Clear floats after the columns */
-.row {
-	flex-direction: column;
+.left-side,
+.right-side {
+    text-align: left;
 }

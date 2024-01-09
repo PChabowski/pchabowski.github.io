@@ -12,6 +12,7 @@
 		flex-direction: column;
 		justify-content: center;
 		max-width: 1300px;
+		width: 100%;
 	}
 	main.content {
 		border-radius: 5px 5px 0px 0px;
