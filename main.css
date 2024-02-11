@@ -74,13 +74,10 @@ h1 {
 }
 
 .social a {
-	color: var(--heading-secondary-color);
-	margin: 2px 8px;
-	padding: 2px;
-	font-size: 33px;
-	width: 55px;
-	height: 55px;
-	text-decoration: none;
+    color: var(--heading-secondary-color);
+    font-size: 33px;
+	padding: 0 5px;
+    margin: 2px 8px;
 }
 
 .social a:hover {
@@ -92,12 +89,12 @@ h1 {
 @media screen and (max-width: 1000px) {
 	html,
 	body {
-		height: auto;
 		align-items: stretch;
 	}
 
 	#conteiner
 	{
+		height: 100vh;
 		max-width: 100%;
 		border-radius: 0;
 	}
