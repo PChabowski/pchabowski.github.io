@@ -1,8 +1,5 @@
 body {
     font-family: 'Inter', sans-serif;
-}
-
-body {
     min-height: max(884px, 100dvh);
 }
 
@@ -980,6 +977,11 @@ select {
 .hover\:bg-blue-600:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1))
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-primary:hover {

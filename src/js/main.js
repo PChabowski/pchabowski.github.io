@@ -84,24 +84,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Filter Projects Logic
     const filterButtons = document.querySelectorAll('.filter-btn');
-    if (filterButtons.length > 0) {
-        filterButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const filter = btn.getAttribute('data-filter');
-                filterButtons.forEach(b => {
-                    b.classList.remove('text-primary', 'font-bold');
-                    b.classList.add('text-text-light', 'dark:text-text-dark');
-                });
-                btn.classList.add('text-primary', 'font-bold');
 
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+
+if (filterButtons.length > 0) {
+    // 1. Upewnij się, że nawigacja ma aria-label, jeśli jeszcze nie została dodana przez JS
+    const nav = filterButtons[0].closest('nav');
+    if (nav && !nav.hasAttribute('aria-label')) {
+        nav.setAttribute('aria-label', 'Filtrowanie projektów');
+    }
+
+    filterButtons.forEach(btn => {
+        // 2. Inicjalizacja atrybutów dostępności
+        btn.setAttribute('type', 'button');
+        const isActive = btn.classList.contains('text-primary');
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+
+        btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
+
+            // 3. Aktualizacja stylów i atrybutów ARIA
+            filterButtons.forEach(b => {
+                b.classList.remove('text-primary', 'font-bold');
+                b.classList.add('text-text-light', 'dark:text-text-dark');
+                b.setAttribute('aria-pressed', 'false'); // Resetujemy stan wszystkich
+            });
+
+            btn.classList.add('text-primary', 'font-bold');
+            btn.classList.remove('text-text-light', 'dark:text-text-dark');
+            btn.setAttribute('aria-pressed', 'true'); // Ustawiamy stan aktywnego
+
+            // 4. Logika filtrowania kart
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
             });
         });
-    }
+    });
+}
+const data = { updatedCount: filterButtons.length };
 });
