@@ -1,3 +1,4 @@
-# Moja wizytówka
+# MyPortfolio
 
-O to moja zwykła prosta strona która jest wizytówką, zrobioną w htmlu i css, i wykorzystanie fontello.
+This is my project make by in HTML, CSS and JavaScript and sometimes can make by help to framework,
+but in the final phase I will try to create in only pure HTML, CSS and JavaScript.

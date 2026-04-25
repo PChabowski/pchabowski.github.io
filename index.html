@@ -1,56 +1,213 @@
-<!DOCTYPE html>
 <html lang="pl">
 
 <head>
     <meta charset="utf-8">
-    <title>Strona Wizytówka</title>
-    <meta name="author" content="Paweł Chabowski">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Portfolio - Paweł Chabowski</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="src/js/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/main.css">
 </head>
 
-<body>
-
-    <main id="conteiner">
-        <article class="content">
-            <header>
-                <h1>Strona Wizytówka</h1>
-            </header>
-
-            <img class="picture" src="img.jpg" width="300" height="220" alt="zdjęcie autora strony">
-            <p>
-                Witaj, nazywam się Paweł a to jest moją prosta strona na githubie, która jest wizytówką. Z tego miejsca
-                możesz się dostać na moje social media, które są podane poniżej albo na <a
-                    href="https://www.pawel-chabowski.pl/programista-frontendowy" target="_blank">moją stronę</a>, na
-                którą serdecznie zapraszam. Również jeśli chcesz możesz rzucić swoim okiem na moje projekty na githubie,
-                pod tym <a href="https://pchabowski.github.io/Projekty">linkiem</a>. Pozdrawiam, miłego dnia!
-
-            </p>
-            <div class="social">
-                <a href="https://www.facebook.com/profile.php?id=100007308978966" target="_blank">
-                    <i class="icon-facebook">
-                    </i>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen">
+    <div class="flex flex-col md:flex-row min-h-screen ai-style-change-4" style="">
+        <!-- SIDEBAR: Brak marginesów auto, czysty Flexbox -->
+        <div
+            class="flex flex-row md:flex-col items-center justify-between px-2 py-4 md:py-12 w-full md:w-16 border-b md:border-b-0 md:border-r border-gray-500 bg-surface-dark sticky top-0 z-30 h-auto md:h-screen transition-all">
+            <!-- 1. GÓRA: Avatar -->
+            <img id="avatar-btn" class="w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer"
+                src="src/img/my-photo.jpg" alt="Avatar">
+            <!-- 2. ŚRODEK: Ikony Social (owinięte w kontener, który na desktopie ma marginesy) -->
+            <div class="flex flex-row md:flex-col items-center gap-6 md:gap-10 md:my-12">
+                <a class="flex items-center justify-center text-text-muted-dark hover:text-primary transition-colors text-xl md:text-2xl"
+                    href="https://www.facebook.com/archweb.online" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/rudo.brody.viking/" target="_blank">
-                    <i class="icon-instagram">
-                    </i>
+                <a class="flex items-center justify-center text-text-muted-dark hover:text-primary transition-colors text-xl md:text-2xl"
+                    href="https://www.instagram.com/archweb.online/" target="_blank">
+                    <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://github.com/PChabowski" target="_blank">
-                    <i class="icon-github-circled">
-                    </i>
+                <a class="flex items-center justify-center text-text-muted-dark hover:text-primary transition-colors text-xl md:text-2xl"
+                    href="https://github.com/PChabowski" target="_blank">
+                    <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/pawe%C5%82-chabowski/" target="_blank">
-                    <i class="icon-linkedin-squared">
-                    </i>
+                <a class="flex items-center justify-center text-text-muted-dark hover:text-primary transition-colors text-xl md:text-2xl"
+                    href="https://www.youtube.com/@Archweb.Online" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a class="flex items-center justify-center text-text-muted-dark hover:text-primary transition-colors text-xl md:text-2xl"
+                    href="https://www.linkedin.com/in/pawel-chabowski/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
-        </article>
-
-    </main>
-
+            <!-- 3. DÓŁ: Motyw -->
+            <div class="flex items-center">
+                <button id="theme-toggle"
+                    class="text-text-muted-dark hover:text-primary transition-colors text-2xl md:text-3xl p-2">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+            </div>
+        </div>
+        <div id="profile-panel"
+            class="w-full md:w-[35%] lg:w-1/3 flex flex-col items-center justify-center p-8 bg-surface-dark border-r border-gray-800 relative md:sticky md:top-0 h-auto md:h-screen transition-all duration-500 overflow-hidden">
+            <div class="text-center w-full max-w-sm mx-auto">
+                <img alt="Paweł Chabowski Profile Picture"
+                    class="w-48 h-48 md:w-64 md:h-64 rounded-full mx-auto mb-8 object-cover shadow-lg border-4 border-white dark:border-gray-800"
+                    src="src/img/my-photo.jpg">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4 font-display text-text-dark">Paweł
+                    Chabowski</h1>
+                <p class="text-text-muted-dark mb-8 leading-relaxed">Witaj, nazywam się Paweł. To jest moja
+                    profesjonalna wizytówka i portfolio. Z tego miejsca możesz
+                    się dostać na moje projekty i social media. Jeśli coś Ci się podoba to zapraszam do kontaktu przez
+                    social media.
+                </p>
+                <!-- <button
+                    class="bg-primary text-white font-medium py-3 px-8 rounded hover:bg-blue-600 transition-colors shadow-md">
+                    Kontakt
+                </button> -->
+            </div>
+            <button id="hide-panel-btn"
+                class="hidden md:block absolute top-4 right-4 text-2xl text-gray-500 hover:text-white transition-colors cursor-pointer">×
+            </button>
+        </div>
+        <div class="flex-1 bg-surface-alt-light dark:bg-surface-alt-dark min-h-screen flex flex-col relative">
+            <header
+                class="p-6 md:p-8 flex justify-end sticky top-0 bg-surface-alt-light/90 dark:bg-surface-alt-dark/90 backdrop-blur-sm z-10 items-center">
+                <nav class="space-x-4 md:space-x-6 text-sm font-medium" aria-label="Filtrowanie projektów">
+                    <button data-filter="all"
+                        class="filter-btn text-text-light dark:text-text-dark text-primary font-bold" type="button"
+                        aria-pressed="true">Wszystkie</button>
+                    <button data-filter="klient"
+                        class="filter-btn text-text-light dark:text-text-dark hover:text-primary transition-colors"
+                        type="button" aria-pressed="false">Dla
+                        Klientów</button>
+                    <button data-filter="templatka"
+                        class="filter-btn text-text-light dark:text-text-dark hover:text-primary transition-colors"
+                        type="button" aria-pressed="false">Templatki</button>
+                    <button data-filter="wspolpraca"
+                        class="filter-btn text-text-light dark:text-text-dark hover:text-primary transition-colors"
+                        type="button" aria-pressed="false">Współpraca</button>
+                </nav>
+            </header>
+            <main class="flex-grow p-6 md:p-8 pt-0">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div data-description="Blood Honor to dynamiczna gra bijatyka osadzona w mrocznym świecie, stworzona przy użyciu nowoczesnych technologii React i Vite. Gra oferuje płynną mechanikę walki, unikalne postacie oraz responsywny interfejs, zapewniając intensywne wrażenia prosto w przeglądarce."
+                        data-category="Gry" data-live="https://bloodhonor.netlify.app/"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                        style="cursor: pointer;">
+                        <img alt="Code editor screenshot" class="w-full h-48 object-cover" src="src/img/project1.png">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Blood Honor</h3>
+                        </div>
+                    </div>
+                    <div data-description="Nowoczesny, minimalistyczny szablon portfolio dla fotografów. Zoptymalizowany pod kątem SEO i szybkości ładowania dzięki frameworkowi Astro."
+                        data-category="templatka" data-live="https://example-photo-port.netlify.app/"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                        style="cursor: pointer; display: block;">
+                        <img alt="Code editor screenshot" class="w-full h-48 object-cover" src="src/img/project.png">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Portfolio Fotografa
+                                (Astro)</h3>
+                        </div>
+                    </div>
+                    <div data-description="System CRM służący do zarządzania relacjami z klientami. Posiada funkcje raportowania i analizy danych."
+                        data-category="wspolpraca" data-live="https://archweb.online"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img alt="CRM system dashboard screenshot" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsQgEoro9cPnYQdcB2AG84fw_y4NCRZdVmufxZmu5-yaz0met2rv_PAE0ZZ-CZw1XO0Z3QcAY3pD8K_Ok9uhvW8-RzdNr8B3W2KgNhnxGvHKG9FCT_ZwybIil5d2SKDaKhWM82L-iEpTRr_mjlP-poTKCY2HA5_E-Ba8TNPEdrjXSqy-lwHQt-H_78bxrc6K_gk_itPdIpX6D6OSPrz3Dd3mg-3UjQuw3Uxp9AKmDvFJ4VKprD66NOcLYZunANG4KMB80TueBxocs">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">System CRM</h3>
+                        </div>
+                    </div>
+                    <div data-description="Projekt Github 2. Szczegółowy opis projektu." data-category="klient"
+                        data-live="https://archweb.online" data-repo="https://github.com/pchabowski/"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img alt="Business planning image" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHCcYh1XG1Cv3Coac9hRCBearc3B0AkO1_2G44nNGtnSVinOpA49YTR78YrlVxjOEPIkHLy4ox_pdNUCIl1Bf2KtGcbQVnnQlyOZ3q4wGAfwKZG0u8QlNZQioO6MGjeWbJB6UcoChjwZrhs_iiVy46cOrJCPD1yu98wEgOeLdxGyGJVMjAZ4KhE0Xi90dUK3NtvF7l_xOqnQT5vKz91n-i98p62mZs-bSU40UAyO8yevmPnkGaufvQ4xs-xDTLawjIXhzYAxYmE0o">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Projekt Github 2</h3>
+                        </div>
+                    </div>
+                    <div data-description="Projekt Github 1. Szczegółowy opis projektu." data-category="wspolpraca"
+                        data-live="https://archweb.online" data-repo="https://github.com/pchabowski/"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg border border-blue-200 dark:border-blue-800 transform -translate-y-1 transition-transform z-10 relative">
+                        <img alt="Laptop on desk screenshot" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3hNhXHE-L0b_q1sNcxt1dQYDNT26DxHjJTp9i0ZPU81We1gNbnAzIlTU7rd-5ATSN7UxPkUZq-KVyo4nOjm1KPmsjxbzMhEAuqyxqc9d63Q4zflHbziZTgpMJAs9uiBUjMqloylRoyl_R34lKxo_JNesMTjGMd80Nx1vdTG68rgEkqefzQNt3tlwZxsApZCvdtIgmXIye9JcFDMGXcIijBKTNar_u1JgdJZv-t2ZSZUTtaQ-KQDfZOdlp3XHV5OyK2DB1adRBfg">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Projekt Github 1</h3>
+                        </div>
+                    </div>
+                    <div data-description="Projekt Github 1. Szczegółowy opis projektu." data-category="templatka"
+                        data-live="https://archweb.online" data-repo="https://github.com/pchabowski/"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img alt="Analytics dashboard screenshot" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBsjAGiqwUV0j0WweJqRHjrt0iahro7gPO22qFr4pfe4AftQsQqWRrAaXxdPbBkFkWBXGjFXHPRY6z7nadI8zht8l9L5KXYvXMru_ZBRwgFROg78EqDFPsj96fgYWJUb3kQR9pDXMdsdumFjunGGpnffxuEUi79iGyuQH5j0DX9qb9iozUH6WgTPCtCJR2kMwmgteYTRc3VGv9xezCNgOE5bHYYBDOu4xfDCtEaJl0lj42C12tt5x4p1DmpUcxp8cgl9V0mrO8J_M">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">System CRM</h3>
+                        </div>
+                    </div>
+                    <div data-description="Projekt Github 1. Szczegółowy opis projektu." data-category="templatka"
+                        data-live="https://archweb.online" data-repo="https://github.com/pchabowski/"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img alt="Code editor screenshot 2" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiNcvA2gN0IU_6heGki-dw4R82dMGw6tDWz8JLrTecCXCJiecvCMzxy7EZwEwgJfiltWc53ys-Ta356oUfqYW-UqF3AwUnuVQ0TEQBbtY0WUv0ZEv6zdnnkQG4QBC8jPtvzE4calSzKypg47Ky2b71iI9cWQMeMD9Y0ssmhb2YAtbR5_1ushFdQWNPCuOqTXvooy2386rOM4TjhDiQVth8STO35ITlNQ7OJxc6ACzBOXPWZhJbr_lyFMf0vkXJbEb1_6-1rdmrh8w">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Projekt Github 1</h3>
+                        </div>
+                    </div>
+                    <div data-description="Projekt Github 1. Szczegółowy opis projektu." data-category="klient"
+                        data-live="https://archweb.online" data-repo="https://github.com/pchabowski/"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img alt="Web application dashboard screenshot 2" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUjKJCtMYpzRvoGOyatdTfVhHCQrEBFepIS7Nz2j4q9JfCLpD_vsmdNG3QMiGFrUtWcnYbBvp40m7h1ZqLiflUlIFybG_HHHRCS4Ta_rJO3ogsHSo0oHKBceteTm4CCrOALqKoeoLh2KX6Mk9eK1Rgn_-0NvwWuH7UDpOHemMQ1lS2vTmKBy3SwufAcBaOLM8MWX6I2b9YhEvjq4VATJ5jxh-zHlmZ_dw22gf3sxroPKdrwVyno8eJCVEo-zWARedrBzzzfzp3c5w">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Aplikacja Webowa</h3>
+                        </div>
+                    </div>
+                    <div data-description="Projekt Github 1. Szczegółowy opis projektu." data-category="klient"
+                        data-live="https://archweb.online" data-repo="https://github.com/pchabowski/"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img alt="CRM system dashboard screenshot 2" class="w-full h-48 object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1P9G_ek9Bt-u0kmeteGMEoPUXPtaSS4tiNA2ve-2tZbax64hIKkCaUqhkd7PjWh64-GInEknGCA9HVNNqauD-AbFw8fKb37rYGToW0bFWznEATDBD2OAlrw3IrVB6bJrTrc8tHTrbsgdvYXbZ8BhWTSf4aTHfKbPmsm84WGOUhiW7obeqhwM5QO17X2y3ftUNp7OeGeIFqAOO_Nr4YhlzsUDowvY8p9mQTNftfkNYstxisreCv_2QGmXr6LQihZhlScFJWRNoGXw">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Projekt Github 2</h3>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- MODAL -->
+    <div id="project-modal"
+        class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div
+            class="bg-surface-light dark:bg-surface-dark w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl relative">
+            <!-- Przycisk zamknij -->
+            <button id="close-modal"
+                class="absolute top-4 right-4 text-3xl text-gray-500 hover:text-white z-10">&times;</button>
+            <!-- Zawartość modala -->
+            <img id="modal-img" src="" alt="" class="w-full h-64 object-cover">
+            <div class="p-8">
+                <h2 id="modal-title" class="text-2xl font-bold mb-4 text-text-light dark:text-text-dark"></h2>
+                <p id="modal-desc" class="text-text-muted-dark leading-relaxed mb-6">Tutaj możesz dodać szczegółowy opis
+                    projektu. Ten tekst może być unikalny dla każdej karty lub
+                    pobierany z atrybutów danych.
+                </p>
+                <div class="flex gap-4">
+                    <a id="modal-live-link" href="#" target="_blank"
+                        class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-colors">Live Demo
+                    </a>
+                    <a id="modal-repo-link" href="#" target="_blank"
+                        class="border border-gray-600 text-gray-300 hover:bg-gray-800 px-6 py-2 rounded-lg transition-colors">Kod
+                        Source
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
