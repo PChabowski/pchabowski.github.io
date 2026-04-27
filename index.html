@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen">
-    <div class="flex flex-col md:flex-row min-h-screen ai-style-change-4" style="">
+    <div class="flex flex-col md:flex-row min-h-screen ai-style-change-4">
         <!-- SIDEBAR: Brak marginesów auto, czysty Flexbox -->
         <div
             class="flex flex-row md:flex-col items-center justify-between px-2 py-4 md:py-12 w-full md:w-16 border-b md:border-b-0 md:border-r border-gray-500 bg-surface-dark sticky top-0 z-30 h-auto md:h-screen transition-all">
@@ -80,13 +80,13 @@
                     <button data-filter="all"
                         class="filter-btn text-text-light dark:text-text-dark text-primary font-bold" type="button"
                         aria-pressed="true">Wszystkie</button>
-                    <button data-filter="klient"
+                    <button data-filter="strony-www"
                         class="filter-btn text-text-light dark:text-text-dark hover:text-primary transition-colors"
-                        type="button" aria-pressed="false">Storny www</button>
-                    <button data-filter="templatka"
+                        type="button" aria-pressed="false">Strony www</button>
+                    <button data-filter="automatyzacje"
                         class="filter-btn text-text-light dark:text-text-dark hover:text-primary transition-colors"
                         type="button" aria-pressed="false">Automatyzacje</button>
-                    <button data-filter="wspolpraca"
+                    <button data-filter="gry"
                         class="filter-btn text-text-light dark:text-text-dark hover:text-primary transition-colors"
                         type="button" aria-pressed="false">Gry</button>
                 </nav>
@@ -94,7 +94,7 @@
             <main class="flex-grow p-6 md:p-8 pt-0">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div data-description="Blood Honor to dynamiczna gra bijatyka osadzona w mrocznym świecie, stworzona przy użyciu nowoczesnych technologii React i Vite. Gra oferuje płynną mechanikę walki, unikalne postacie oraz responsywny interfejs, zapewniając intensywne wrażenia prosto w przeglądarce."
-                        data-category="gry" data-live="https://bloodhonor.netlify.app/"
+                        data-category="Gry" data-live="https://bloodhonor.netlify.app/"
                         class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                         style="cursor: pointer;">
                         <img alt="Code editor screenshot" class="w-full h-48 object-cover" src="src/img/project1.png">
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div data-description="Nowoczesny, minimalistyczny szablon portfolio dla fotografów. Zoptymalizowany pod kątem SEO i szybkości ładowania dzięki frameworkowi Astro."
-                        data-category="strony www" data-live="https://example-photo-port.netlify.app/"
+                        data-category="Strony www" data-live="https://example-photo-port.netlify.app/"
                         class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                         style="cursor: pointer; display: block;">
                         <img alt="Code editor screenshot" class="w-full h-48 object-cover" src="src/img/project.png">
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <div data-description="Klasyka w nowym wydaniu. Przeglądarkowa wersja gry w statki, stworzona na bazie koncepcji „Head First JavaScript”. Wzbogaciłem ją o autorskie poprawki UX, takie jak obsługa małych liter w komendach."
-                        data-category="gry" data-live="https://pchabowski.github.io/Battleship.JS/" 
+                        data-category="Gry" data-live="https://pchabowski.github.io/Battleship.JS/" 
                         data-repo="https://github.com/pchabowski/Battleship.JS"
                         class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                         <img alt="CRM system dashboard screenshot" class="w-full h-48 object-cover"
@@ -122,13 +122,22 @@
                             <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Battleship Game</h3>
                         </div>
                     </div>
-                    <div data-description="Automatyczny system przetwarzania wyciągów bankowych. Wykorzystuje n8n do ekstrakcji danych z plików PDF i ich synchronizacji z Google Sheets, oszczędzając czas na ręcznym i zmudnym wpisywaniu danych. Zobacz tutorial na moim kanale YouTube." data-category="automatyzacje"
+                    <div data-description="Automatyczny system przetwarzania wyciągów bankowych. Wykorzystuje n8n do ekstrakcji danych z plików PDF i ich synchronizacji z Google Sheets, oszczędzając czas na ręcznym i zmudnym wpisywaniu danych. Zobacz tutorial na moim kanale YouTube." data-category="Automatyzacje"
                         
                         class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                         <img alt="Business planning image" class="w-full h-48 object-cover"
                             src="src/img/project3.png">
                         <div class="p-4">
                             <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Automatyzacja budżetu domowego</h3>
+                        </div>
+                    </div>
+                    <div data-description="Nowoczesna aplikacja do gry w szachy online, zbudowana w oparciu o React, TypeScript i Supabase. Projekt stanowi ambitną platformę szachową z zaimplementowanym systemem autentykacji, poczekalnią graczy oraz logiką rozgrywki w czasie rzeczywistym. Arenachess łączy szybkość technologii Vite z solidnym backendem, będąc stale rozwijanym ekosystemem dla miłośników królewskiej gry." data-category="gry"
+                        data-live="https://arena-chess.netlify.app/"
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg border border-blue-200 dark:border-blue-800 transform -translate-y-1 transition-transform z-10 relative">
+                        <img alt="Laptop on desk screenshot" class="w-full h-48 object-cover"
+                            src="src/img/project4.png">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg text-text-light dark:text-text-dark">Arenachess</h3>
                         </div>
                     </div>
                 </div>
@@ -147,13 +156,10 @@
             <img id="modal-img" src="" alt="" class="w-full h-64 object-cover">
             <div class="p-8">
                 <h2 id="modal-title" class="text-2xl font-bold mb-4 text-text-light dark:text-text-dark"></h2>
-                <p id="modal-desc" class="text-text-muted-dark leading-relaxed mb-6">Tutaj możesz dodać szczegółowy opis
-                    projektu. Ten tekst może być unikalny dla każdej karty lub
-                    pobierany z atrybutów danych.
-                </p>
+                <p id="modal-desc" class="text-text-muted-dark leading-relaxed mb-6"></p>
                 <div class="flex gap-4">
                     <a id="modal-live-link" href="#" target="_blank"
-                        class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-colors">Live Demo
+                        class="bg-primary hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-colors">Preview
                     </a>
                     <a id="modal-repo-link" href="#" target="_blank"
                         class="border border-gray-600 text-gray-300 hover:bg-gray-800 px-6 py-2 rounded-lg transition-colors">Kod
